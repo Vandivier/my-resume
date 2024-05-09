@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "my-resume"
+version = "0.1.0"
+description = ""
+authors = ["Vandivier <vandivi3r@gmail.com>"]
+readme = "README.md"
+packages = [{include = "my_resume"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.1"
+jinja2 = "^3.1.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
