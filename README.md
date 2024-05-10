@@ -39,7 +39,7 @@ Consider the attached LinkedIn resume export. Let's create my resume.html from s
 Please ignore the Skill and Achievement sections. Remove any images. Remove my high school education entry. For other education entries, declare the institution name in a subheading and immediately place a paragraph after containing the program details. The program details paragraph should contain both the subject and graduation date.
 
 Keep the font size equal for p tags and for h3 or smaller headings, with a 12px font size.
-Use at most 0.5 for any margin or padding needed.
+Use at most 0.5rem for any margin or padding needed. Paragraphs should not have padding nor horizontal margin.
 
 Replace my phone number with `{{ PHONE }}` so that I can store it in a dotenv file and interpolate it later. This way I can save my HTML file on GitHub without exposing my phone number.
 ```
