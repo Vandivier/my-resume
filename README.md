@@ -41,5 +41,5 @@ Please ignore the Skill and Achievement sections. Remove any images. Remove my h
 Keep the font size equal for p tags and for h3 or smaller headings, with a 12px font size.
 Use at most 0.5rem for any margin or padding needed. Paragraphs should not have padding nor horizontal margin.
 
-Replace my phone number with `{{ PHONE }}` so that I can store it in a dotenv file and interpolate it later. This way I can save my HTML file on GitHub without exposing my phone number.
+Replace my phone number with `{{ PHONE }}` so that I can store it in a dotenv file and interpolate it later. Do similarly with `{{ EMAIL }}`. This way I can save my HTML file on GitHub without exposing my sensitive data.
 ```
