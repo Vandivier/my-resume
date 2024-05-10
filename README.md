@@ -33,10 +33,27 @@ Basically, styling on the HTML body tag may fail to transpile into PDF.
 
 ## Sample GPT-4 Prompt
 
+Two interesting prompt strategies include:
+
+1. Use the sample prompt below
+2. Provide the resume.html from the repository to GPT-4 and ask it to replace the content based on your resume.
+
+Here's the sample prompt:
+
 ```
 Consider the attached LinkedIn resume export. Let's create my resume.html from scratch. Write the entire HTML file including all of my experience.
 
-Please ignore the Skill and Achievement sections. Remove any images. Remove my high school education entry. For other education entries, declare the institution name in a subheading and immediately place a paragraph after containing the program details. The program details paragraph should contain both the subject and graduation date.
+Group each entry for work or education into its own section tag.
+For work experience, follow the format `{{ POSITION }} at {{ EMPLOYER_NAME }}`
+For contract experience, append `- Contract` to the position name`.
+
+For education entries, follow the format:
+`<p>{{ CREDENTIAL NAME }} from {{ START DATE }} - {{ END DATE}}</p>`
+Remove my high school education entry.
+
+Retain the Summary section.
+Ignore the Skill and Achievement sections.
+Do not include images in the HTML resume.
 
 Keep the font size equal for p tags and for h3 or smaller headings, with a 12px font size.
 Use at most 0.5rem for any margin or padding needed. Paragraphs should not have padding nor horizontal margin.
