@@ -1,138 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Vandivier's Resume</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Vandivier - Resume</title>
     <style>
-      body,
-      h1,
-      h2,
-      h3,
-      p {
-        font-family: Arial, sans-serif;
-        font-size: 12px;
-        margin: 0;
-        padding: 0;
-      }
-      section {
-        margin-bottom: 0.5rem;
-      }
+        body, h3, p {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+        section {
+            margin-bottom: 0.5rem;
+        }
+        p {
+            margin: 0;
+        }
+        hr {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h1>John Vandivier</h1>
-      <p>{{ EMAIL }}</p>
-      <p>{{ PHONE }}</p>
-      <p>
-        <a href="https://linkedin.com/in/john-vandivier">LinkedIn</a> |
-        <a href="https://github.com/Vandivier">GitHub</a>
-      </p>
+        <h2>John Vandivier</h2>
+        <p>Email: {{ EMAIL }}</p>
+        <p>Phone: {{ PHONE }}</p>
     </header>
-
+    
     <section>
-      <h2>Summary</h2>
-      <p>
-        John brings a unique background including a decade of software
-        development and data analysis experience, a Ph.D. in Economics, and a
-        prior life in D.C policy work.
-      </p>
-      <p>John is proud open source contributor, mentor, and educator.</p>
+        <h3>Summary</h3>
+        <p>John brings a unique background including a decade of software development and data analysis experience, a Ph.D. in Economics, and a prior life in D.C policy work.</p>
+        <p>John is a proud open source contributor, mentor, and educator.</p>
     </section>
-
+    
+    <hr>
+    
     <section>
-      <h2>Experience</h2>
-      <h3>Senior Software Engineer at Upstart</h3>
-      <p>Mar 2022 - Present</p>
-      <ul>
-        <li>
-          Increased revenue by 10% per month by delivering core pricing logic
-          for auto-secured personal loans.
-        </li>
-        <li>
-          Reduced Python static analysis errors by 50% while speeding up lint
-          performance by 98% across multiple components by implementing mypy,
-          sonarqube, and ruff leading to reduced production errors.
-        </li>
-        <li>
-          Founded and organized the monthly Python Guild attended by 1/3 of
-          corporate ICs, helping solve dozens of out-of-team issues per half.
-        </li>
-      </ul>
-
-      <h3>Cloud Engineer - Contract at Amazon</h3>
-      <p>Oct 2021 - Feb 2022</p>
-      <ul>
-        <li>
-          Full-stack development with React, Node, TypeScript, and Java on a
-          global-scope initiative to improve HR.
-        </li>
-      </ul>
-
-      <h3>Principal Developer at Blue Cross NC</h3>
-      <p>Jan 2021 - Oct 2021</p>
-      <ul>
-        <li>
-          Full-stack development with JavaScript, TypeScript, Python, Seaborn,
-          React, D3.js, Next.js, Drupal, and Docker.
-        </li>
-      </ul>
-
-      <h3>Senior Software Engineer at Capital One</h3>
-      <p>Apr 2019 - Jan 2021</p>
-      <ul>
-        <li>Full Stack Development for CreditWise.</li>
-      </ul>
-
-      <h3>Full Stack Engineer at The College Board</h3>
-      <p>Nov 2018 - Mar 2019</p>
-      <ul>
-        <li>
-          Full-stack development with React, Node, AngularJS, Bootstrap,
-          Express, Puppeteer, React, Sequelize.
-        </li>
-      </ul>
-
-      <h3>Lead Software Engineer at Halfaker and Associates, LLC</h3>
-      <p>May 2017 - Oct 2018</p>
-      <ul>
-        <li>
-          Lead Developer for multiple AWS GovCloud projects with the Department
-          of Defense as our main client.
-        </li>
-      </ul>
-
-      <h3>Lead Software Engineer at SAIC</h3>
-      <p>Jun 2015 - May 2017</p>
-      <ul>
-        <li>
-          Web development in JavaScript and Java. Thick client development with
-          VBA and the JavaScript API for Office.
-        </li>
-      </ul>
-
-      <h3>Director of Research and Data Management at Harden Global</h3>
-      <p>Jul 2013 - Dec 2014</p>
-      <ul>
-        <li>
-          Full stack web development with WordPress, HTML, CSS, JavaScript,
-          jQuery, and PHP.
-        </li>
-      </ul>
+        <h3>Experience</h3>
+        <p>Senior Software Engineer at Upstart</p>
+        <ul>
+            <li>Increased revenue by 10% per month by delivering core pricing logic for auto-secured personal loans.</li>
+            <li>Reduced Python static analysis errors by 50% while speeding up lint performance by 98% across multiple components.</li>
+            <li>Founded and organized the monthly Python Guild.</li>
+            <li>Championed and developed the Escape Velocity service starter.</li>
+        </ul>
+        
+        <p>Cloud Engineer at Amazon - Contract</p>
+        <ul>
+            <li>Full-stack development with React, Node, TypeScript, and Java.</li>
+            <li>Led integration testing strategy with Java and JUnit.</li>
+        </ul>
+        
+        <p>Principal Developer at Blue Cross NC</p>
+        <ul>
+            <li>Full-stack development with JavaScript, TypeScript, Python, and React.</li>
+            <li>Mentor junior developers.</li>
+        </ul>
+        
+        <p>Senior Software Engineer at Capital One</p>
+        <ul>
+            <li>Full Stack Development for CreditWise.</li>
+            <li>Led the UI COVID response for web.</li>
+        </ul>
+        
+        <p>Full Stack Engineer at The College Board</p>
+        <ul>
+            <li>Full-stack development with React, Node, and AngularJS.</li>
+            <li>Extensive AWS Cloud tech usage.</li>
+        </ul>
+        
+        <p>Lead Software Engineer at Halfaker and Associates, LLC</p>
+        <ul>
+            <li>Lead Developer for multiple AWS GovCloud projects.</li>
+        </ul>
+        
+        <p>Lead Software Engineer at SAIC</p>
+        <ul>
+            <li>Web development in JavaScript and Java.</li>
+            <li>Team lead for 9 developers within a Scaled Agile project.</li>
+        </ul>
+        
+        <p>Director of Research and Data Management at Harden Global</p>
+        <ul>
+            <li>Full stack web development with WordPress, HTML, CSS, JavaScript.</li>
+            <li>Data analysis and ops with MySQL, Google Analytics, STATA.</li>
+        </ul>
     </section>
-
+    
+    <hr>
+    
     <section>
-      <h2>Education</h2>
-      <h3>George Mason University</h3>
-      <p>Doctor of Philosophy - PhD, Economics from <span>>Aug 2015</span> - <span>Aug 2021</span></p>
-      <h3>George Mason University</h3>
-      <p>Master's degree, Public Policy Analysis from 2013 - 2015</p>
-      <h3>University of Houston</h3>
-      <p>
-        Bachelor of Science (BS), Economics and Political Science from 2010 -
-        2012
-      </p>
+        <h3>Education</h3>
+        <section>
+            <h3>Doctor of Philosophy - PhD, Economics</h3>
+            <p>George Mason University</p>
+            <p>2015 - 2021</p>
+        </section>
+        <section>
+            <h3>Master's degree, Public Policy Analysis</h3>
+            <p>George Mason University - Schar School of Policy and Government</p>
+            <p>2013 - 2015</p>
+        </section>
+        <section>
+            <h3>Bachelor of Science (BS), Economics and Political Science</h3>
+            <p>University of Houston</p>
+            <p>2010 - 2012</p>
+        </section>
     </section>
-  </body>
+</body>
 </html>

@@ -41,14 +41,22 @@ Two interesting prompt strategies include:
 Here's the sample prompt:
 
 ```
-Consider the attached LinkedIn resume export. Let's create my resume.html from scratch. Write the entire HTML file including all of my experience.
+Consider the attached LinkedIn resume export. Let's create my resume.html from scratch. Write the entire HTML file including all of my experience. Don't skip or summarize the notes related to an experience entry. Do not use a footer in this document.
 
-Group each entry for work or education into its own section tag.
-For work experience, follow the format `{{ POSITION }} at {{ EMPLOYER_NAME }}`
+Specify my phone number as `Phone: {{ PHONE }}` so that I can store it in a dotenv file and interpolate it later. Do similarly with email. This way I can save my HTML file on GitHub without exposing my sensitive data. Include my GitHub and LinkedIn URLs in the ordinary way.
+
+Create an `Experience` section and an `Education` section. Add horizontal divider across the page once for each of these sections.
+
+For work experience entries, use a subheading with the format `{{ POSITION }} at {{ EMPLOYER_NAME }}`
 For contract experience, append `- Contract` to the position name`.
 
-For education entries, follow the format:
-`<p>{{ CREDENTIAL NAME }} from {{ START DATE }} - {{ END DATE}}</p>`
+For education dates, use years without specifying the month, and follow the format:
+`<section>
+   <h3>CREDENTIAL NAME</h3>
+   <p>{{ INSTITUTION }}</p>
+   <p>{{ START DATE }} - {{ END DATE}}</p>
+</section>`
+
 Remove my high school education entry.
 
 Retain the Summary section.
@@ -57,6 +65,4 @@ Do not include images in the HTML resume.
 
 Keep the font size equal for p tags and for h3 or smaller headings, with a 12px font size.
 Use at most 0.5rem for any margin or padding needed. Paragraphs should not have padding nor horizontal margin.
-
-Replace my phone number with `{{ PHONE }}` so that I can store it in a dotenv file and interpolate it later. Do similarly with `{{ EMAIL }}`. This way I can save my HTML file on GitHub without exposing my sensitive data.
 ```
