@@ -2,6 +2,7 @@ import os
 from jinja2 import Template
 from dotenv import load_dotenv
 import subprocess
+import glob
 
 # Load environment variables
 load_dotenv()
@@ -9,20 +10,23 @@ load_dotenv()
 # Prepare your data from environment variables
 data = {"EMAIL": os.getenv("EMAIL"), "PHONE": os.getenv("PHONE")}
 
-# Read the HTML template
-template_path = "resume.html"
-with open(template_path, "r") as file:
-    template = Template(file.read())
+# Get all resume HTML files in the current directory
+template_files = glob.glob("resume*.html")
 
-# Render the HTML with the interpolated data
-rendered_html_path = "interpolated.html"
-with open(rendered_html_path, "w") as file:
-    file.write(template.render(data))
+for template_path in template_files:
+    with open(template_path, "r") as file:
+        template = Template(file.read())
 
-# Path for the output PDF
-pdf_output_path = "resume.pdf"
+    # Create a corresponding HTML and PDF file name
+    base_name = os.path.splitext(template_path)[0]
+    rendered_html_path = f"{base_name}_interpolated.html"
+    pdf_output_path = f"{base_name}.pdf"
 
-# Call wkhtmltopdf to convert the interpolated HTML to PDF
-subprocess.run(["wkhtmltopdf", rendered_html_path, pdf_output_path])
+    # Render the HTML with the interpolated data
+    with open(rendered_html_path, "w") as file:
+        file.write(template.render(data))
 
-print("PDF generated successfully!")
+    # Call wkhtmltopdf to convert the interpolated HTML to PDF
+    subprocess.run(["wkhtmltopdf", rendered_html_path, pdf_output_path])
+
+print("PDFs generated successfully!")
