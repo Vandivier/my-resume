@@ -162,3 +162,4 @@ cython_debug/
 # ignore build files
 *interpolated.html
 *.pdf
+.DS_Store
