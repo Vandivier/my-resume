@@ -17,6 +17,7 @@ template_files = glob.glob("resume*.html")
 output_dir = "dist"
 os.makedirs(output_dir, exist_ok=True)
 
+generated_pdfs = []
 for template_path in template_files:
     with open(template_path, "r") as file:
         template = Template(file.read())
@@ -32,5 +33,9 @@ for template_path in template_files:
 
     # Call wkhtmltopdf to convert the interpolated HTML to PDF
     subprocess.run(["wkhtmltopdf", rendered_html_path, pdf_output_path])
+    generated_pdfs.append(f"./dist/{base_name}.pdf")
 
 print("PDFs generated successfully in the 'dist' directory!")
+print("Generated files:")
+for pdf in generated_pdfs:
+    print(f"- {pdf}")
