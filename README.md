@@ -5,7 +5,7 @@ My version-controlled markdown resume with pdf export style control.
 I care about the style control so that I can better comply with resume best practices such as restricting the resume to a single page.
 
 It's a good idea to ensure your output resume is ATS compliant by testing it with the Indeed Resume Scan tool:
-https://www.indeed.com/career-services/resume-help/instant-report/?collectorID=rescan
+<https://www.indeed.com/career-services/resume-help/instant-report/?collectorID=rescan>
 
 ## Recommended Workflow
 
@@ -43,11 +43,11 @@ The recommended approach has four steps:
 
 You may need to tinker with the output. You can also try prompting from scratch.
 
-#### Prompting from Scratch
+### Prompting from Scratch
 
 In this approach, you do not paste any existing HTML. You should still attach your LinkedIn-generated PDF resume. Then you can use a prompt like the below, which was used to generate the resume.html found in this repository:
 
-```
+```bash
 Consider the attached LinkedIn resume PDF.
 Let's create an HTML representation of this resume.
 Do not skip or summarize any content except for items I specifically ask you to omit from the HTML.
