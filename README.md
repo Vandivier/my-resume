@@ -1,11 +1,8 @@
 # my-resume
 
-My version-controlled markdown resume with pdf export style control.
+An HTML resume template with pdf export style control.
 
-I care about the style control so that I can better comply with resume best practices such as restricting the resume to a single page.
-
-It's a good idea to ensure your output resume is ATS compliant by testing it with the Indeed Resume Scan tool:
-https://www.indeed.com/career-services/resume-help/instant-report/?collectorID=rescan
+I recommend measuring your resume quality as [described here](https://www.ladderly.io/blog/2024-02-12-resume-optimization#parsing-and-keyword-density).
 
 ## Recommended Workflow
 
