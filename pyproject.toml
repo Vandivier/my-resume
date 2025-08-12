@@ -1,17 +1,18 @@
-[tool.poetry]
-name = "my-resume"
-version = "0.1.0"
-description = ""
-authors = ["Vandivier <vandivi3r@gmail.com>"]
-readme = "README.md"
-packages = [{include = "my_resume"}]
+ [project]
+ name = "my-resume"
+ version = "1.0.0"
+ description = "HTML resume to PDF generator using WeasyPrint"
+ readme = "README.md"
+ requires-python = ">=3.11"
+ authors = [
+   { name = "Vandivier", email = "vandivi3r@gmail.com" }
+ ]
+ dependencies = [
+   "python-dotenv>=1.0.1",
+   "jinja2>=3.1.4",
+   "weasyprint>=62.0"
+ ]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-python-dotenv = "^1.0.1"
-jinja2 = "^3.1.4"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+ [build-system]
+ requires = ["hatchling>=1.25"]
+ build-backend = "hatchling.build"

@@ -13,15 +13,25 @@ Instead:
 1. Export your LinkedIn resume built with the [LinkedIn Resume Builder](https://www.linkedin.com/help/linkedin/answer/a551182).
 2. Use GPT-4 to convert the LinkedIn-built PDF into `resume.html`. See the `GPT-4 Prompt` section for more tips about the specific prompt to use.
 3. Replace this repository's `resume.html` with your own.
-4. Ensure you have `wkhtmltopdf` installed locally.
-   1. On mac, this is `brew install wkhtmltopdf`. Don't worry if you see a deprecation notice on that install.
-5. Run `poetry install` in this repo. If you need poetry, try `pipx install poetry`.
-6. Run `poetry run python create-pdf-resume.py`
-   1. Please ensure `python` refers to Python v3.11+
-   2. You can try it with a lower version, but you may need to update the pyproject.toml file, and reinstall, and it also might not work.
+4. Install `uv` and sync dependencies.
+   - macOS (Homebrew): `brew install uv`
+   - Script: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+   - Verify: `uv --version`
+5. Install project dependencies: `uv sync`
+6. Generate PDFs: `uv run python create-pdf-resume.py`
+   1. Requires Python v3.11+ (managed by `uv`)
 7. Optional: Remove `resume.pdf` from `.gitignore`.
    1. Benefit: This publishes the final form of your resume to GitHub
    2. Cost/Risk: If your resume has sensitive or personal data on it, that data will be published to the open web.
+
+## PDF Engine
+
+This project uses WeasyPrint for HTML/CSS to PDF conversion.
+
+- Pros: Modern CSS support, high quality output, no external headless browser.
+- macOS dependencies (if needed): `brew install cairo pango gdk-pixbuf libffi`
+- After installing system libs, re-run: `uv sync`
+- If your HTML relies on heavy client-side JavaScript, consider Playwright instead.
 
 ## Known Limitations
 

@@ -1,7 +1,7 @@
 import os
 from jinja2 import Template
 from dotenv import load_dotenv
-import subprocess
+from weasyprint import HTML
 import glob
 
 # Load environment variables
@@ -31,8 +31,8 @@ for template_path in template_files:
     with open(rendered_html_path, "w") as file:
         file.write(template.render(data))
 
-    # Call wkhtmltopdf to convert the interpolated HTML to PDF
-    subprocess.run(["wkhtmltopdf", rendered_html_path, pdf_output_path])
+    # Convert the interpolated HTML to PDF using WeasyPrint
+    HTML(filename=rendered_html_path).write_pdf(pdf_output_path)
     generated_pdfs.append(f"./dist/{base_name}.pdf")
 
 print("PDFs generated successfully in the 'dist' directory!")
