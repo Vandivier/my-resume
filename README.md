@@ -13,25 +13,22 @@ Instead:
 1. Export your LinkedIn resume built with the [LinkedIn Resume Builder](https://www.linkedin.com/help/linkedin/answer/a551182).
 2. Use GPT-4 to convert the LinkedIn-built PDF into `resume.html`. See the `GPT-4 Prompt` section for more tips about the specific prompt to use.
 3. Replace this repository's `resume.html` with your own.
-4. Install `uv` and sync dependencies.
+4. Install `uv`.
    - macOS (Homebrew): `brew install uv`
    - Script: `curl -LsSf https://astral.sh/uv/install.sh | sh`
    - Verify: `uv --version`
-5. Install project dependencies: `uv sync`
-6. Generate PDFs: `uv run python create-pdf-resume.py`
-   1. Requires Python v3.11+ (managed by `uv`)
-7. Optional: Remove `resume.pdf` from `.gitignore`.
-   1. Benefit: This publishes the final form of your resume to GitHub
-   2. Cost/Risk: If your resume has sensitive or personal data on it, that data will be published to the open web.
+5. Create and activate a virtual environment:
+   - `uv venv`
+6. macOS system libraries for WeasyPrint (if not already installed):
+   - `brew install cairo pango gdk-pixbuf libffi pkg-config`
+7. Install Python dependencies into your venv:
+   - `uv sync --no-install-project`
+8. Generate PDFs inside the venv:
+   - `python create-pdf-resume.py`
 
-## PDF Engine
+## Built With
 
 This project uses WeasyPrint for HTML/CSS to PDF conversion.
-
-- Pros: Modern CSS support, high quality output, no external headless browser.
-- macOS dependencies (if needed): `brew install cairo pango gdk-pixbuf libffi`
-- After installing system libs, re-run: `uv sync`
-- If your HTML relies on heavy client-side JavaScript, consider Playwright instead.
 
 ## Known Limitations
 
@@ -43,18 +40,18 @@ Basically, styling on the HTML body tag may fail to transpile into PDF.
 
 The recommended approach has four steps:
 
-1. Attach your linkedin-resume.pdf to GPT-4
+1. Attach your linkedin-resume.pdf to ChatGPT or a similar tool
 2. Paste the existing resume.html from this repository into the prompt window
 3. Write a new line, a triple-dash seperator (`---`), and another new line
 4. Write `Consider the attached resume PDF. Please create a resume HTML form of the content based on the HTML template provided above.`
 
 You may need to tinker with the output. You can also try prompting from scratch.
 
-#### Prompting from Scratch
+### Prompting from Scratch
 
 In this approach, you do not paste any existing HTML. You should still attach your LinkedIn-generated PDF resume. Then you can use a prompt like the below, which was used to generate the resume.html found in this repository:
 
-```
+```txt
 Consider the attached LinkedIn resume PDF.
 Let's create an HTML representation of this resume.
 Do not skip or summarize any content except for items I specifically ask you to omit from the HTML.
