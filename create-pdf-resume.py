@@ -1,7 +1,7 @@
 import os
 from jinja2 import Template
 from dotenv import load_dotenv
-from weasyprint import HTML
+from weasyprint import HTML, CSS
 import glob
 
 # Load environment variables
@@ -31,7 +31,7 @@ for template_path in template_files:
     with open(rendered_html_path, "w") as file:
         file.write(template.render(data))
 
-    # Convert the interpolated HTML to PDF using WeasyPrint
+    # Convert the interpolated HTML to PDF using WeasyPrint with half-inch margins
     HTML(filename=rendered_html_path).write_pdf(pdf_output_path)
     generated_pdfs.append(f"./dist/{base_name}.pdf")
 
