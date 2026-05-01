@@ -3,29 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <style>
+        @page { margin: 0.25in; }
+
         body, h1, h2, h3, p {
             font-family: Arial, sans-serif;
             font-size: 12px;
             margin: 0;
             padding: 0;
         }
+
         h1, h2, h3 {
             color: blue;
             margin-bottom: 0.5rem;
         }
+
         hr {
             border: 0;
             height: 1px;
             background-color: #ccc;
-            margin: 20px 0;
+            margin: 0.5rem 0;
         }
+
         section {
             margin-bottom: 0.5rem;
         }
+
         ul {
             padding-left: 20px;
         }
+
+        .title-block {
+            display: inline-block;
+            width: 40%;
+        }
+
         .vertical-margin-small {
             display: block;
             margin: 0.5rem 0;
@@ -36,32 +49,48 @@
     <section>
         <h1>John Vandivier</h1>
         <h2>Centreville, Virginia, United States</h2>
-        <p>Email: vandivi3r@gmail.com</p>
-        <p>Phone: (202) 805-7622</p>
+        <p>Email: {{ EMAIL }}</p>
+        <p>Phone: {{ PHONE }}</p>
         <p>LinkedIn: <a href="https://linkedin.com/in/john-vandivier">linkedin.com/in/john-vandivier</a></p>
         <p>GitHub: <a href="https://github.com/Vandivier">github.com/Vandivier</a></p>
         <br />
-        <p>John brings a unique background including a decade of software development and data analysis experience, a Ph.D. in Economics, and a prior life in D.C policy work.</p>
-        <p>John is a proud open source contributor, mentor, and educator.</p>
+        <p>
+            Dr. John Vandivier's highlights include:
+            <ol>
+                <li>12+ years of full stack development experience and 5+ years in artificial intelligence and data science</li>
+                <li>Leading technical strategy for multiple 100+ headcount organizations</li>
+                <li>Discovering and delivering at multi-quarter, multi-team, and multimillion dollar scale</li>
+                <li>Domain expertise in financial services, business services, cloud, and artificial intelligence</li>
+                <li>Providing open source contribution, public education, and mentorship to individuals and audiences over 25,000</li>
+            </ol>
+        </p>
     </section>
     <hr>
     <section>
         <h2>Experience</h2>
         <section>
-            <h3>Senior Software Engineer at Upstart</h3>
-            <p>Mar 2022 - Present</p>
+            <h3 class="title-block">Staff Software Engineer, AI at Gusto</h3>
+            <p class="title-block">Aug 2024 - Present</p>
             <ul>
-                <li>Increased revenue by 10% per month by delivering core pricing logic for auto-secured personal loans.</li>
-                <li>Reduced Python static analysis errors by 50% while speeding up lint performance by 98% across multiple components.</li>
-                <li>Founded and organized the monthly Python Guild.</li>
-                <li>Championed and developed the Escape Velocity service starter, accelerating enterprise Python library publishing by 80%.</li>
-                <li>Interview, onboard, and mentor developers. Assist leadership in prioritization and negotiate scope with partners. Championed generative AI and multiplier tools.</li>
-                <li>Developed and deployed in an AWS environment at hundreds of TPS scale. TypeScript was used with the AWS CDK and for some internal tools.</li>
+                <li>Cross-functional AI lead for Gusto's 130+ person Retirement Engineering org, serving a 500k+ business customer base.</li>
+                <li>Implemented a customer-facing chat-based sales experience that lifted conversions by 50%.</li>
+                <li>Built AI integrations across Salesforce, ChatGPT, Gemini, OpenAI, Braintrust, AWS, and GCP in TypeScript, Python, and Ruby.</li>
+                <li>Interviewed, hired, and mentored senior contributors up to Principal level.</li>
             </ul>
         </section>
         <section>
-            <h3>Cloud Engineer at Amazon - Contract</h3>
-            <p>Oct 2021 - Feb 2022</p>
+            <h3 class="title-block">Senior Software Engineer at Upstart</h3>
+            <p class="title-block">Mar 2022 - May 2024</p>
+            <ul>
+                <li>Increased revenue by 10% (millions of dollars) per month by delivering core pricing logic for auto-secured personal loans.</li>
+                <li>Reduced Python static analysis errors by 50% while speeding up lint performance by 98% across multiple components.</li>
+                <li>Developed the Escape Velocity service starter, accelerating enterprise Python library publishing by 80%.</li>
+                <li>Developed and deployed in an AWS environment at hundreds of TPS scale. Configured infrastructure as code using helm and the AWS CDK with TypeScript.</li>
+            </ul>
+        </section>
+        <section>
+            <h3 class="title-block">Cloud Engineer at Amazon - Contract</h3>
+            <p class="title-block">Oct 2021 - Feb 2022</p>
             <ul>
                 <li>Led integration testing strategy with Java and JUnit.</li>
                 <li>Contributed to full stack development with React, Node, TypeScript, and Java on a global-scope initiative to improve HR operations.</li>
@@ -70,8 +99,8 @@
             </ul>
         </section>
         <section>
-            <h3>Principal Developer at Blue Cross NC</h3>
-            <p>Jan 2021 - Oct 2021</p>
+            <h3 class="title-block">Principal Developer at Blue Cross NC</h3>
+            <p class="title-block">Jan 2021 - Oct 2021</p>
             <ul>
                 <li>Provided a user-friendly interface for medical doctors to view and update patient data.</li>
                 <li>Full-stack development with JavaScript, TypeScript, Next.js, React.js, Drupal, and Docker.</li>
@@ -80,8 +109,8 @@
             </ul>
         </section>
         <section>
-            <h3>Senior Software Engineer at Capital One</h3>
-            <p>Apr 2019 - Jan 2021</p>
+            <h3 class="title-block">Senior Software Engineer at Capital One</h3>
+            <p class="title-block">Apr 2019 - Jan 2021</p>
             <ul>
                 <li>Full Stack Development for CreditWise: <a href="https://creditwise.capitalone.com/">creditwise.capitalone.com</a></li>
                 <li>Led the UI COVID response for web resulting in a 5% jump in traffic in early 2020.</li>
@@ -91,8 +120,8 @@
             </ul>
         </section>
         <section>
-            <h3>Full Stack Engineer at The College Board</h3>
-            <p>Nov 2018 - Mar 2019</p>
+            <h3 class="title-block">Full Stack Engineer at The College Board</h3>
+            <p class="title-block">Nov 2018 - Mar 2019</p>
             <ul>
                 <li>Contributed to full stack development with React, Node, AngularJS, Bootstrap, Express, Puppeteer, React, Sequelize.</li>
                 <li>Used numerous AWS services including DynamoDB, RDS, EC2, Lambda, Route 53, and Elastic Beanstalk.</li>
@@ -100,8 +129,8 @@
             </ul>
         </section>
         <section>
-            <h3>Lead Software Engineer at Halfaker and Associates, LLC</h3>
-            <p>May 2017 - Oct 2018</p>
+            <h3 class="title-block">Lead Software Engineer at Halfaker and Associates, LLC</h3>
+            <p class="title-block">May 2017 - Oct 2018</p>
             <ul>
                 <li>Lead Developer for multiple AWS GovCloud projects.</li>
                 <li>Created the structured interview format used for engineers, contributed to performance management, and mentored developers.</li>
@@ -109,8 +138,8 @@
             </ul>
         </section>
         <section>
-            <h3>Lead Software Engineer at SAIC</h3>
-            <p>Jun 2015 - May 2017</p>
+            <h3 class="title-block">Lead Software Engineer at SAIC</h3>
+            <p class="title-block">Jun 2015 - May 2017</p>
             <ul>
                 <li>Led a team of 9 developers and 4 non-developers within a Scaled Agile project.</li>
                 <li>Developed a web and desktop applications for the United States Patent and Trade Office (USPTO).</li>
@@ -118,12 +147,12 @@
             </ul>
         </section>
         <section>
-            <h3>Director of Research and Data Management at Harden Global</h3>
-            <p>Jul 2013 - Dec 2014</p>
+            <h3 class="title-block">Head of Data at Harden Global</h3>
+            <p class="title-block">Jul 2013 - Dec 2014</p>
             <ul>
-                <li>Contributed to full stack development with WordPress, HTML, CSS, JavaScript, jQuery, and PHP.</li>
+                <li>Saved five figures per year over outsourcing with full stack development using WordPress, HTML, CSS, JavaScript, jQuery, and PHP.</li>
                 <li>Analyzed polling and marketing data using MySQL, MS Access SQL, Google Analytics, STATA, and Excel.</li>
-                <li>Provided strategic communication based on research and A/B testing to drive outcomes including donations, email list growth, and votes, leading to more than 10 state and national election wins.</li>
+                <li>Provided strategic communication driving donations, email list growth, and votes, resulting in more than 10 state and national election wins.</li>
             </ul>
         </section>
     </section>
@@ -148,35 +177,35 @@
     </section>
     <hr>
     <section>
-        <h2>Notable Projects</h2>
+        <h2>Open Source Contributions</h2>
         <section>
             <h3>Ladderly.io</h3>
             <p>Dec 2020 - Present</p>
             <ul>
-                <li>An open source full-stack application with 100 MAUs dedicated to helping software engineers land their first or next role.</li>
-                <li>Built with Node.js Blitz.js, Next.js, React.js, Tailwind CSS, and TypeScript</li>
-                <li>Leverages Postgres SQL through Supabase with Prisma ORM and Vercel for deployment.</li>
-                <li>Equipped with Google Analytics, Social Sign-In, and Stripe integration.</li>
-                <li>Additional offline scripts in Node.js to build the sitemap, transcribe videos, and perform data backup and restore operations.</li>
+                <li>An open source career acceleration platform for software engineers with over 800 registered users</li>
+                <li>A full stack TypeScript application built with Next.js, React.js, Tailwind CSS, TypeScript, and more</li>
+                <li>Postgres SQL DB, Prisma ORM, containerized with Docker and deployed on Vercel</li>
+                <li>Integrated with Google Analytics, Social Auth, Stripe, and AI features</li>
             </ul>
         </section>
+        <section>
+            <h3>Other Projects</h3>
+            <p>
+                Angular, Blitz.js, googleapis/python-genai, Next.js, Pyodide
+            </p>
+        </section>
     </section>
+    <hr>
     <section>
-        <h2>Publications</h2>
+        <h2>Selected Publications</h2>
         <a class="vertical-margin-small" href="https://scholar.google.com/citations?user=R7Jd4aMAAAAJ&hl=en">Google Scholar Profile</a>
         <section>
             <h3>Preliminary attitudinal trends in alternative postsecondary learning</h3>
-            <p class="vertical-margin-small">2021/4/16, Applied Economics Letters, Cited by 1</p>
-            <h3>New Digital Education as the Market Solution to the Student Debt Crisis</h3>
-            <p class="vertical-margin-small">2020/2/2, SSRN, Cited by 2</p>
-            <h3>The Impact of Employer Education Assistance on Enrollment</h3>
-            <p class="vertical-margin-small">2020/5/10, SSRN, Cited by 1</p>
-            <h3>COVID-19 and Alternative Postsecondary Learning</h3>
-            <p class="vertical-margin-small">2021/4/15, SSRN, Cited by 1</p>
+            <p class="vertical-margin-small">2021/4/16, Applied Economics Letters</p>
             <h3>Hirability and Educational Prestige</h3>
             <p class="vertical-margin-small">2021/4/22, SSRN</p>
-            <h3>Conformity and Soft Skills as Determinants of Alternatively Credentialed Non-College Graduate Hireability</h3>
-            <p class="vertical-margin-small">2021/4/15, SSRN</p>
+            <h3>New Digital Education as the Market Solution to the Student Debt Crisis</h3>
+            <p class="vertical-margin-small">2020/2/2, SSRN</p>
         </section>
     </section>
 </body>
